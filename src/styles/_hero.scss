@@ -1,0 +1,58 @@
+.hero {
+    background-image: url('../images/festa3.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    height: 100vh; // Definindo altura para ocupar a tela inteira
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        content: ' ';
+        opacity: 0.7;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+        top: 50%; // Alinhando verticalmente
+        transform: translateY(-50%);
+    }
+
+    &__item {
+        font-size: 6vw; // Tamanho de fonte relativo à largura da tela
+        margin-bottom: 20px;
+    }
+    
+    &__itens{
+        font-size: 2vw; // Tamanho de fonte relativo à largura da tela
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 640px) {
+        padding: 50px 0;
+
+        &__item {
+            font-size: 8vw;
+            color: #cb4d4d;
+            background-color: #000;
+        }
+
+        &__itens {
+            font-size: 4vw;
+        }
+    }
+}
+
+.contador {
+    font-size: 3vw; // Tamanho de fonte relativo à largura da tela
+}
